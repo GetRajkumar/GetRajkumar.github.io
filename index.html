@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajkumar Subramani — Frontend Technical Lead</title>
+  <meta name="description" content="Frontend Technical Lead with 13 years building scalable, accessible web applications and design systems. React, Angular, TypeScript, micro-frontends." />
+  <meta name="author" content="Rajkumar Subramani" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rajkumar Subramani — Frontend Technical Lead" />
+  <meta property="og:description" content="13 years building scalable, accessible web apps & design systems. React · Angular · TypeScript · Micro-Frontends." />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231f3a5f%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-weight=%22bold%22>R</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="#top">RS</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <p class="hero__eyebrow">Frontend Technical Lead · UX/UI · 13 Years</p>
+        <h1 class="hero__title">Rajkumar Subramani</h1>
+        <p class="hero__lede">
+          I turn complex products into <strong>fast, accessible, scalable</strong> web experiences —
+          and lead the teams and architecture that keep them that way.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">View my work</a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+        <ul class="hero__highlights">
+          <li><strong>11</strong> React micro-frontends shipped</li>
+          <li><strong>24×</strong> faster production builds</li>
+          <li><strong>13</strong> years frontend + design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work" aria-labelledby="work-h">
+      <div class="container">
+        <h2 class="section__title" id="work-h">Selected Work</h2>
+        <p class="section__intro">Case studies focus on decisions and outcomes — proprietary details are omitted.</p>
+
+        <article class="case">
+          <div class="case__tags">
+            <span>React</span><span>Module Federation</span><span>Rspack</span><span>Micro-Frontends</span>
+          </div>
+          <h3 class="case__title">Re-architecting an Angular monolith into 11 React micro-frontends</h3>
+          <p class="case__meta">Frontend Technical Lead · EY · Team of 5 · 2022–present</p>
+          <p>
+            A multi-tenant, enterprise-scale platform had outgrown its single Angular codebase — teams
+            blocked each other and builds were slow. I led the re-architecture into <strong>11
+            independently-deployable React micro-frontends</strong> (separate repos) wired with
+            <strong>Module Federation</strong>, behind a shell container owning routing, auth, and
+            shared dependencies.
+          </p>
+          <ul class="case__results">
+            <li>Migrated the build from react-scripts to <strong>Rspack</strong> — production builds <strong>~2 min → ~5 sec (≈24×)</strong>.</li>
+            <li>Releases moved from <strong>every 2 months to biweekly</strong>, with independent team delivery.</li>
+            <li>Engineered smooth rendering of a <strong>~40MB dataset</strong> in a single view, shared across micro-frontends.</li>
+          </ul>
+        </article>
+
+        <article class="case">
+          <div class="case__tags">
+            <span>Design Systems</span><span>Accessibility</span><span>WCAG</span>
+          </div>
+          <h3 class="case__title">Building an accessible design system from scratch</h3>
+          <p class="case__meta">Frontend Technical Lead · EY</p>
+          <p>
+            To keep a large multi-tenant product visually and behaviorally consistent across many
+            independently-built micro-frontends, I built the design system's components from scratch as
+            the shared UI layer — with accessibility enforced in one place and per-tenant theming
+            supported.
+          </p>
+          <ul class="case__results">
+            <li>Accessibility audit score sustained <strong>consistently above 80%</strong> (WCAG).</li>
+            <li>Automated the design system's build, deployment, and audit workflows for continuous compliance.</li>
+            <li>Faster, more consistent feature delivery across teams.</li>
+          </ul>
+        </article>
+
+        <article class="case">
+          <div class="case__tags">
+            <span>Web Performance</span><span>Build Tooling</span>
+          </div>
+          <h3 class="case__title">Cutting production build time 24× (≈2 min → 5 sec)</h3>
+          <p class="case__meta">Frontend Technical Lead · EY</p>
+          <p>
+            A two-minute build quietly taxed every PR and release across multiple teams. By moving to
+            independent per-MFE builds and migrating the toolchain to Rspack, I removed that drag —
+            turning build time into a non-issue and unlocking a far faster release cadence.
+          </p>
+          <ul class="case__results">
+            <li>Production build <strong>~2 min → ~5 sec</strong> across all modules and repos.</li>
+            <li>Enabled biweekly + on-demand emergency releases.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section--alt" id="about" aria-labelledby="about-h">
+      <div class="container container--narrow">
+        <h2 class="section__title" id="about-h">About</h2>
+        <p>
+          I'm a Frontend Technical Lead with 13 years across the full spectrum of frontend — from pixel-level
+          UI and UX design to micro-frontend architecture, performance, and DevOps. I currently lead a
+          5-engineer team at EY on a multi-tenant enterprise platform, where I own the frontend architecture,
+          the design system, and delivery from dev to production.
+        </p>
+        <p>
+          What sets my work apart is the bridge between <strong>design and engineering</strong>: I'm equally
+          at home in Figma and Adobe XD as in React, Angular, and TypeScript. That hybrid lets me build
+          interfaces that are both genuinely usable and architecturally sound — accessible by default,
+          fast under real-world data, and maintainable as teams scale.
+        </p>
+        <p>
+          I'm open to <strong>Frontend Lead, Staff, and Architect</strong> roles, remote or onsite.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-h">
+      <div class="container">
+        <h2 class="section__title" id="skills-h">Skills &amp; Tools</h2>
+        <div class="skills">
+          <div class="skills__group">
+            <h3>Frontend</h3>
+            <p>React · Redux · Next.js · Remix · Angular · Vue · TypeScript · JavaScript · HTML5 · CSS3 · Responsive UI</p>
+          </div>
+          <div class="skills__group">
+            <h3>Architecture</h3>
+            <p>Micro-frontends (Module Federation) · Rspack · Design systems · Performance optimization · Angular→React migration</p>
+          </div>
+          <div class="skills__group">
+            <h3>UX / UI</h3>
+            <p>Figma · Adobe XD · Axure RP · Photoshop · Illustrator · Accessibility (WCAG) · UX strategy</p>
+          </div>
+          <div class="skills__group">
+            <h3>Backend &amp; Cloud</h3>
+            <p>Node.js · Express · REST APIs · AWS (EC2, Lambda, S3, RDS, Aurora, CloudWatch)</p>
+          </div>
+          <div class="skills__group">
+            <h3>DevOps</h3>
+            <p>Docker · Kubernetes · Azure DevOps · Jenkins · GitHub CI/CD · Infrastructure as Code</p>
+          </div>
+          <div class="skills__group">
+            <h3>Ways of working</h3>
+            <p>Team leadership · Agile/Scrum · TDD · Cross-functional collaboration · Mentoring</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-h">
+      <div class="container container--narrow center">
+        <h2 class="section__title" id="contact-h">Let's talk</h2>
+        <p>
+          Building something where frontend quality, performance, and design-system maturity matter?
+          I'd love to hear about it.
+        </p>
+        <div class="contact__links">
+          <a class="btn btn--primary" href="mailto:raj.s4391@gmail.com">raj.s4391@gmail.com</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/rajkumar-subramani-90b87647" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="https://github.com/GetRajkumar" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Rajkumar Subramani · Built with HTML &amp; CSS, hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
