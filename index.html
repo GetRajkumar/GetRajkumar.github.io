@@ -75,6 +75,49 @@
             <strong>Module Federation</strong>, behind a shell container owning routing, auth, and
             shared dependencies.
           </p>
+
+          <figure class="case__figure">
+            <svg class="diagram" viewBox="0 0 820 440" role="img"
+                 aria-labelledby="dg-title dg-desc" preserveAspectRatio="xMidYMid meet">
+              <title id="dg-title">Micro-frontend architecture diagram</title>
+              <desc id="dg-desc">A shell/host container sits on top, connecting to eleven independently
+                deployed React micro-frontends, which all draw from a shared design system and a reused
+                ~40MB dataset at the bottom.</desc>
+
+              <!-- Shell / host -->
+              <rect class="dg-shell" x="30" y="26" width="760" height="66" rx="12" />
+              <text class="dg-label dg-on-fill" x="410" y="52">Shell / Host Container</text>
+              <text class="dg-sub dg-on-fill" x="410" y="74">routing · auth · tenant theming · shared deps (Module Federation)</text>
+
+              <!-- connectors: shell -> bus -> mfes -->
+              <path class="dg-line" d="M410 92 V126 M30 126 H776 M96 126 V172 M226 126 V172 M356 126 V172 M486 126 V172 M616 126 V172 M742 126 V172" />
+
+              <!-- MFE row (6 shown, representing 11) -->
+              <g>
+                <rect class="dg-mfe" x="50" y="172" width="92" height="62" rx="10" />
+                <text class="dg-label" x="96" y="208">MFE 1</text>
+                <rect class="dg-mfe" x="180" y="172" width="92" height="62" rx="10" />
+                <text class="dg-label" x="226" y="208">MFE 2</text>
+                <rect class="dg-mfe" x="310" y="172" width="92" height="62" rx="10" />
+                <text class="dg-label" x="356" y="208">MFE 3</text>
+                <rect class="dg-mfe" x="440" y="172" width="92" height="62" rx="10" />
+                <text class="dg-label" x="486" y="208">MFE 4</text>
+                <text class="dg-label dg-muted" x="570" y="210">…</text>
+                <rect class="dg-mfe" x="696" y="172" width="92" height="62" rx="10" />
+                <text class="dg-label" x="742" y="208">MFE 11</text>
+              </g>
+
+              <!-- connectors: mfes -> bus -> shared -->
+              <path class="dg-line" d="M96 234 V300 M226 234 V300 M356 234 V300 M486 234 V300 M616 280 V300 M742 234 V300 M30 300 H776 M410 300 V332" />
+
+              <!-- Shared layer -->
+              <rect class="dg-shared" x="30" y="332" width="760" height="76" rx="12" />
+              <text class="dg-label" x="410" y="362">Shared Design System</text>
+              <text class="dg-sub" x="410" y="386">from scratch · a11y &gt; 80% (WCAG) · ~40MB dataset reused across MFEs</text>
+            </svg>
+            <figcaption>11 React micro-frontends in separate repos, composed by a shell container over a shared, accessible design system.</figcaption>
+          </figure>
+
           <ul class="case__results">
             <li>Migrated the build from react-scripts to <strong>Rspack</strong> — production builds <strong>~2 min → ~5 sec (≈24×)</strong>.</li>
             <li>Releases moved from <strong>every 2 months to biweekly</strong>, with independent team delivery.</li>
